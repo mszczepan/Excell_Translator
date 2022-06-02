@@ -20,8 +20,11 @@ def write_file(ws, column_nr, column_sym, start_row, read_list):
     ws.insert_cols(column_nr)
     row_nr = start_row
     for row_value in read_list:
-        ws[column_sym + row_nr] = row_value
+        ws[column_sym + str(row_nr)] = row_value
         row_nr = row_nr + 1
 
+
+def save_file(wb, name):
+    wb.save(name)
 
 
